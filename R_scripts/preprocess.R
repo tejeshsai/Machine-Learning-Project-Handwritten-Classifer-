@@ -22,22 +22,22 @@
   }
   
   #show handwritten digit with show_digit(matriximage$x[n,]),n is any number below 60000.
-  matriximage<-load_image_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-images.idx3-ubyte")
+  matriximage<-load_image_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-images.idx3-ubyte")
   show_digit <- function(arr784, col=gray(12:1/12), ...) {
     image(matrix(arr784, nrow=28)[,28:1], col=col, ...)
   }
   #Prepare fore prediction visualization
-  matrixtest<-as.list(load_image_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-images.idx3-ubyte"))
+  matrixtest<-as.list(load_image_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-images.idx3-ubyte"))
   show_number <- function(arr784, col=gray(12:1/12), ...) {
     image(matrix(arr784, nrow=28)[,28:1], col=col, ...)
   }
   #save data as dataframe
   # though not sure what to do with label data set...now
   # convert labels in to categorial value
-  imagetraining<-as.data.frame(load_image_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-images.idx3-ubyte"))
-  imagetest<-as.data.frame(load_image_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-images.idx3-ubyte"))
-  labeltraining<-as.factor(load_label_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-labels.idx1-ubyte"))
-  labeltest<-as.factor(load_label_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-labels.idx1-ubyte"))
+  imagetraining<-as.data.frame(load_image_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-images.idx3-ubyte"))
+  imagetest<-as.data.frame(load_image_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-images.idx3-ubyte"))
+  labeltraining<-as.factor(load_label_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-labels.idx1-ubyte"))
+  labeltest<-as.factor(load_label_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-labels.idx1-ubyte"))
   library(e1071) # Support Vector Machine (SVM)
   
   # Combine label and image integer. Rebuild Training and Test.

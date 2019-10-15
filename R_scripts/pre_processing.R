@@ -20,13 +20,13 @@ load_label_file <- function(filename) {
   y
 }
 getwd() #get working directory
-train <- load_image_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-images.idx3-ubyte")
+train <- load_image_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-images.idx3-ubyte")
 #change to train dataset path
-test <- load_image_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-images.idx3-ubyte")
+test <- load_image_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-images.idx3-ubyte")
 #change to test dataset path
-train$y <- load_label_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-labels.idx1-ubyte")
+train$y <- load_label_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/train-labels.idx1-ubyte")
 #accessing element y in the list
-test$y <- load_label_file("D:/Development/Machine Learning Project/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-labels.idx1-ubyte")  
+test$y <- load_label_file("C:/Users/pswat/OneDrive/Desktop/AMRITA/Sem 7/ML/Machine-Learning-Project-Handwritten-Classifer-/Dataset/ubyte-version/t10k-labels.idx1-ubyte")  
 #accessing element y in test list
 
 class(train)
